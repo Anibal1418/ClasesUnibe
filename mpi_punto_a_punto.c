@@ -1,9 +1,3 @@
-/*
- * Actividad de Programacion: Comunicacion punto a punto con MPI
- * Compilacion: mpicc mpi_punto_a_punto.c -o mpi_punto_a_punto
- * Ejecucion:   mpirun -np 2 ./mpi_punto_a_punto
- */
-
 #include <stdio.h>
 #include <mpi.h>
 
