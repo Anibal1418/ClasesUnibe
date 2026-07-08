@@ -1,0 +1,4 @@
+Hadoop permite procesar grandes volumenes de datos.
+MapReduce divide el trabajo en map shuffle y reduce.
+Python Streaming permite escribir mapper y reducer en Python.
+Hadoop Hadoop MapReduce datos datos datos.
