@@ -1,0 +1,43 @@
+{
+    "id": "/",
+    "name": "YourArtArchive",
+    "short_name": "ArtArchive",
+    "start_url": ".",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#F5F0E8",
+    "theme_color": "#2B1A0F",
+    "description": "Archive, organize, and review the stories that stay with you.",
+    "orientation": "any",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/archive-mark.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
