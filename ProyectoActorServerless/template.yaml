@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Microservicio serverless con Akka Typed y supervisión de workers.
+
+Resources:
+  ActorTaskFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      # El JAR sombreado generado por Maven contiene todas las dependencias.
+      CodeUri: target/actor-serverless.jar
+      # Clase y método invocados por AWS Lambda.
+      Handler: com.luis.actorserverless.LambdaHandler::handleRequest
+      # Runtime administrado de Java.
+      Runtime: java17
+      # Memoria suficiente para la JVM y el ActorSystem del laboratorio.
+      MemorySize: 1024
+      # Límite superior de la invocación HTTP.
+      Timeout: 10
+      Environment:
+        Variables:
+          WORKER_COUNT: 3
+      Events:
+        TaskEndpoint:
+          Type: HttpApi
+          Properties:
+            Path: /tasks
+            Method: POST
+
+Outputs:
+  TaskEndpointUrl:
+    Description: Endpoint HTTP generado por API Gateway.
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/tasks"
