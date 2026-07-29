@@ -1,0 +1,8 @@
+Validación local del entregable
+================================
+
+- Revisión estática de estructura, CUDA, OpenMP, Spark RDD, Spark DataFrame, speedup, supervisión y retries: OK.
+- Compilación sintáctica de módulos Python: OK.
+- Pruebas del API con backend OpenMP local: 2 pruebas aprobadas.
+- Métricas locales: 7 repeticiones por tamaño y mediana, almacenadas en metrics/.
+- CUDA y Spark administrado requieren la infraestructura objetivo para producir métricas reales; el informe no presenta valores simulados como mediciones.
